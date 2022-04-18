@@ -17,16 +17,10 @@ span {
 
 body {
   margin: 0;
-  font-family: 'Roboto', 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: 'Roboto',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
 }
 
 ul {
@@ -58,23 +52,25 @@ p {
   position: relative;
 }
 
-button {
-  font-family: 'Roboto', sans-serif;
+.btn {
+  display: inline-block;
   padding: .7rem 1.5rem;
   margin: 1rem 0;
+  font-family: 'Roboto', sans-serif;
   background-color: $primary-color;
   border: 1px solid $primary-color;
   color: #f8f8f8;
   font-size: 1rem;
   font-weight: 500;
-  display: flex;
   border-radius: 4px;
+
+  &:hover {
+    background-color: #47dcff;
+    border: 1px solid #47dcff;
+  }
 }
 
-button:hover {
-  background-color: #47dcff;
-  border: 1px solid #47dcff;
-}
+
 
 @media screen and (max-width: 940px) {
   .h1 {

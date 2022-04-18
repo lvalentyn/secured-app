@@ -1,0 +1,112 @@
+@import '../../index.scss';
+
+.navbar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 100;
+
+	&__container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 1rem 2rem;
+	}
+
+	&__logo-box {
+		display: flex;
+		align-items: center;
+
+		color: #fff;
+	}
+
+	&__logo {
+		margin-right: 1rem;
+
+		font-size: 3rem;
+		color: $primary-color;
+	}
+
+	&__menu {
+		display: flex;
+		align-items: center;
+
+		padding: 0 1rem;
+	}
+
+	&__el {
+		padding: 0 2rem;
+
+		font-weight: 600;
+	}
+
+	&__link {
+		text-transform: capitalize;
+	}
+
+	&__burger {
+		display: none;
+	}
+
+	@media screen and (max-width: 940px) {
+		&__menu {
+			position: absolute;
+			top: 0;
+			right: -100%;
+			flex-direction: column;
+			justify-content: center;
+
+			width: 50%;
+			height: 100vh;
+
+			background-color: rgba(0, 0, 0, .8);
+			transition: .3s ease;
+		}
+
+		.blur {
+			position: absolute;
+			width: 100vw;
+			height: 100vh;
+			backdrop-filter: blur(2px);
+			z-index: -1;
+		}
+
+		&.active {
+			.navbar__menu {
+				right: 0;
+			}
+		}
+
+		&__el {
+			padding: 1rem;
+		}
+
+		&__link {
+			font-size: 1.8rem;
+		}
+
+		&__btn {
+			font-size: 1.5rem;
+		}
+
+		&__burger {
+			display: block;
+			cursor: pointer;
+			user-select: none;
+			z-index: 1000;
+		}
+
+		&__icon {
+			font-size: 2rem;
+			color: #fff;
+		}
+
+	}
+
+	@media screen and (max-width: 568px) {
+		&__menu {
+			width: 100%;
+		}
+	}
+}
