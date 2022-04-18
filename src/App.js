@@ -1,10 +1,10 @@
-import './App.scss';
+import Hero from "./components/Hero/Hero";
 
 function App() {
 	return (
-		<div className="app">
-
-		</div>
+		<>
+			<Hero />
+		</>
 	);
 }
 
