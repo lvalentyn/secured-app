@@ -46,10 +46,14 @@ p {
 }
 
 .container {
+  width: 100%;
   max-width: 1240px;
   margin: auto;
   height: 100%;
-  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .btn {

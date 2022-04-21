@@ -4,14 +4,24 @@
 	position: fixed;
 	top: 0;
 	left: 0;
+
+	padding: 1rem 2rem;
 	width: 100%;
 	z-index: 100;
+
+	transition: .3s ease;
+
+	&.sticky {
+		background: rgba(0, 0, 0, .4);
+		padding: .5rem 2rem;
+		border-bottom: 1px solid #f8f8f8;
+	}
 
 	&__container {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		padding: 1rem 2rem;
+
 	}
 
 	&__logo-box {
@@ -66,6 +76,8 @@
 
 		.blur {
 			position: absolute;
+			top: 0;
+			left: 0;
 			width: 100vw;
 			height: 100vh;
 			backdrop-filter: blur(2px);

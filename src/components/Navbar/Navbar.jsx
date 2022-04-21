@@ -5,12 +5,19 @@ import './Navbar.scss'
 
 const Navbar = () => {
 	const menuList = ['home', 'recovery', 'Cloud', 'Contact']
-
 	const [nav, setNav] = useState(false)
+	const [sticky, setSticky] = useState(false)
+
 	const handleNav = () => setNav(!nav)
 
+	const handlerSticky = () => {
+		(window.scrollY >= 100) ? setSticky(true) : setSticky(false)
+	}
+
+	window.addEventListener('scroll', handlerSticky)
+
 	return (
-		<div className={`navbar ${nav ? 'active' : ''}`} onClick={() => setNav(false)}>
+		<div className={`navbar ${nav ? 'active' : ''} ${sticky ? 'sticky' : ''}`} onClick={() => setNav(false)}>
 			{nav && (
 				<div className="blur"></div>
 			)}
